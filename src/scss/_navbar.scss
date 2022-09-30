@@ -1,0 +1,41 @@
+.navbar {
+    padding: 1rem;
+    ul {
+        list-style: none;
+    }
+    .hamburger {
+        display: block;
+        margin-left: auto;
+        @include mq('lg') {
+            display: none;
+        }
+    }
+}
+
+.header {
+    &__menu {
+        display: none;
+        padding: 1rem;
+        &.is-active {
+            display: block;
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+        @include mq('lg') {
+            display: block;
+        }
+        ul {
+            @include mq('lg') {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;                
+            }            
+        }
+    }
+}
